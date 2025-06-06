@@ -1,0 +1,151 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;   /* Nền đen */
+    color: #e0e0e0;               /* Chữ trắng nhạt */
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+    line-height: 1.6;
+}
+
+h1 {
+    color: #90caf9;              /* Xanh dương nhạt */
+    font-size: 28px;
+}
+
+h2 {
+    color: #ffffff;
+    font-size: 20px;
+    margin-top: 24px;
+}
+
+blockquote {
+    background-color: #1e1e1e;   /* Nền tối hơn cho blockquote */
+    padding: 10px 15px;
+    border-left: 4px solid #42a5f5;
+    margin: 10px 0;
+    font-style: italic;
+    color: #cfd8dc;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+strong {
+    color: #ffffff;
+}
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    blockquote {
+        font-size: 14px;
+    }
+    .toc {
+        display: none;
+    }
+    .container {
+        padding-left: 20px;   /* ✅ reset lại padding trái khi mục lục ẩn */
+        padding-right: 20px; /* ✅ tùy chỉnh cân đối 2 bên */
+    }
+}
+
+
+.container {
+    background-color: #1e1e1e;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.05);
+    
+}
+
+
+.responsive-image {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.responsive-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Mục Lục */
+.toc {
+  position: fixed;
+  top: 100px;
+  left: 20px;
+  width: 220px;
+  background-color: #1e1e1e;
+  color: #fff;
+  padding: 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  z-index: 100;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+.toc h3 {
+  margin-top: 0;
+  font-size: 16px;
+  color: #4fd1c5;
+}
+.toc ul {
+  list-style: none;
+  padding: 0;
+}
+.toc li {
+  margin: 8px 0;
+}
+.toc a {
+  color: #ddd;
+  text-decoration: none;
+}
+.toc a:hover {
+  text-decoration: underline;
+}
+
+/* Toggle ẩn/hiện mục lục */
+.toc ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  overflow: hidden;
+}
+
+.toc.collapsed ul {
+  max-height: 0;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.toc:not(.collapsed) ul {
+  max-height: 500px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.toc h3 {
+  cursor: pointer;
+}
+
+
+
