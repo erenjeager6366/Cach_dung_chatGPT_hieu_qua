@@ -26,7 +26,11 @@
   <h3 onclick="toggleToc()">📌 Table of Contents</h3>
   <!--Language switch links-->
   <p>
-     <a href="../index.html">🇻🇳 Vietnamese</a> | <a href="en/index.html">🌐 English</a>
+<a href="../en/index.html" onclick="return preventSameLang('en')">🌐 English</a> |
+<a href="../index.html" onclick="return preventSameLang('vi')">🇻🇳 Vietnamese</a>
+
+
+
   </p>
   
    <ul id="toc-list">

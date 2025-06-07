@@ -30,8 +30,9 @@
   <h3 onclick="toggleToc()">📌 Mục lục</h3>
   <!--Liên kết chuyển đổi -->
   <p>
-     <a href="../index.html">🇻🇳 Tiếng Việt</a> | <a href="en/index.html">🌐 English</a>
-  </p>
+    <a href="./en/index.html" onclick="return preventSameLang('en')">🌐 English</a> |
+    <a href="./index.html" onclick="return preventSameLang('vi')">🇻🇳 Vietnamese</a>
+
 
    <ul id="toc-list">
     <li><a href="#giai-thich">1. Giải thích bài học</a></li>
